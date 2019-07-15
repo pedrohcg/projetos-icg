@@ -36,7 +36,7 @@ Cada pixel contém suas informações RGBA que são armazenadas em 4 bytes. Cada
 	<br>
 </p>
 
-Agora vamos observar o cabeçalho da função putPixel: 
+Para desenhar um pixel na tela criaremos uma funçâo chamada putPixel, na imagem abaixo temos o cabeçalho da função putPixel: 
 
 <p align="center">
 	<br>
