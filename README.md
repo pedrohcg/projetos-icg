@@ -95,12 +95,12 @@ Agora vamos verificar o cabeçalho da função drawLine:
 	<br>
 </p>
  
-Essa função recebe os parâmetros:
-	-x0 -> ponto x inicial da reta.
-    	-y0 -> ponto y inicial da reta.
-	-x1 -> ponto x final da reta.
-	-y1 -> ponto y final da reta.
-	-corI -> vetor que armazena a cor do vértice inicial da reta.
+Essa função recebe os parâmetros: <br> <br>
+-x0 -> ponto x inicial da reta. <br>
+-y0 -> ponto y inicial da reta. <br>
+-x1 -> ponto x final da reta. <br>
+-y1 -> ponto y final da reta. <br>
+-corI -> vetor que armazena a cor do vértice inicial da reta. <br>
 	
 Devemos entender como o algoritmo de Bresenham funciona, a imagem abaixo nos ajudará com isso:
 
