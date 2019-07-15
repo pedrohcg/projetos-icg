@@ -50,7 +50,7 @@ Ele recebe como parâmetros a posição x, a posição y e um vetor que contém 
 <p align="center">
 	<br>
 	<img src="./projeto1/prints-cg/rgba-memoria.png"/ width=500px height=150px>
-	<h5 align="center">Figure 2 - Ocupacao do pixel na memoria</h5>
+	<h5 align="center">Figure 3 - Ocupacao do pixel na memoria</h5>
 	<br>
 </p>
 
@@ -65,7 +65,7 @@ Após implementarmos essa função o código fica assim:
 <p align="center">
 	<br>
 	<img src="./projeto1/prints-cg/codigo1.png"/ width=500px height=100px>
-	<h5 align="center">Figure 2 - Ocupacao do pixel na memoria</h5>
+	<h5 align="center">Figure 4 - Código 2</h5>
 	<br>
 </p>
             
@@ -74,7 +74,7 @@ Os resultados são os seguintes:
 <p align="center">
 	<br>
 	<img src="./projeto1/prints-cg/foto1.png"/ width=500px height=500px>
-	<h5 align="center">Figure 2 - Ocupacao do pixel na memoria</h5>
+	<h5 align="center">Figure 5 - Resultado do código 2</h5>
 	<br>
 </p>
 
@@ -88,18 +88,28 @@ Para rasterizar linhas utilizaremos o algoritmo de Bresenham.  O algoritmo de Br
 
 Agora vamos verificar o cabeçalho da função drawLine:
 
-/**         (imagem)         **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/cabecalho2.png"/ width=500px height=50px>
+	<h5 align="center">Figure 6 - Função drawLine</h5>
+	<br>
+</p>
  
 Essa função recebe os parâmetros:
 	-x0 -> ponto x inicial da reta.
-    -y0 -> ponto y inicial da reta.
+    	-y0 -> ponto y inicial da reta.
 	-x1 -> ponto x final da reta.
 	-y1 -> ponto y final da reta.
 	-corI -> vetor que armazena a cor do vértice inicial da reta.
 	
 Devemos entender como o algoritmo de Bresenham funciona, a imagem abaixo nos ajudará com isso:
 
-/**         (imagem)         **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/bresenham.png"/ width=500px height=300px>
+	<h5 align="center">Figure 7 - Pixels ativados pelo algoritmo de Bresenham</h5>
+	<br>
+</p>
 
 Como podemos ver na imagem o algoritmo escolhe o pixel mais próximo do ponto médio da reta quando ele passa por 2 pixels diferentes. Para entendermos como essa escolha é feita primeiro precisamos olhar para a equação reduzida da reta:
 
@@ -198,11 +208,21 @@ Logo, Podemos concluir que:
 Além disso, também devemos incrementar a variável x quando d < 0  e incrementar x e y quando d >= 0.
 Finalmente, após transformer tudo isso em linhas de código temos o seguinte resultado:
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/foto2.png"/ width=500px height=500px>
+	<h5 align="center">Figure 8 - Resultado do uso do algoritmo de Bresenham</h5>
+	<br>
+</p>
        
 Podemos perceber que conseguimos rasterizar uma linha utilizando o algoritmo de Bresenham, mas o algoritmo está funcionando apenas de 0° a 45°, ou seja, está funcionando apenas no primeiro octante e agora devemos fazer com que ele funcione em todos. Observe a imagem abaixo para uma representação melhor dos octantes:
       
-/**        (imagem)        **/		
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/octantes.png"/ width=500px height=500px>
+	<h5 align="center">Figure 9 - Octantes do sistema cartesiano</h5>
+	<br>
+</p>		
               
 Graças a imagem é possível perceber que quando dx for menor que 0 só teremos que trocar as posições iniciais pelas finais e vice-versa, já que retas representadas no primeiro, segundo, sétimo e oitavo quadrantes podem ser representadas no quinto, sexto, terceiro, quarto respectivamente.
 Já temos o algoritmo pronto para o oitavo octante  agora devemos calcular o di e dnew para o primeiro, segundo e sétimo octantes.
@@ -254,7 +274,12 @@ Além disso, também é necessário incrementar x quando d < 0 e incrementar x e
 
 Depois de fazer os mesmos cálculos aos 2 octantes restantes temos o seguinte resultado:
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/foto3.png"/ width=500px height=500px>
+	<h5 align="center">Figure 10 - Linhas em vários quadrantes</h5>
+	<br>
+</p>
 
 Como podemos ver agora é possível desenhar linhas em todos os quadrantes.
 
@@ -266,15 +291,30 @@ Agora que já temos o algoritmo de Brasenham pronto temos que fazer um algoritmo
 
 A primeira será uma que retorna o tamanho da linha, vamos chama-la de distancia. O cabeçalho dessa função é esse:
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/distancia.png"/ width=500px height=30px>
+	<h5 align="center">Figure 11 - Tamanho da linha (distância)</h5>
+	<br>
+</p>
 
 Ela recebe a posição inicial e final dos vértices e utilizando Pitágoras descobrimos seu tamanho, o trecho de código abaixo mostra como é feito o calculo:
                          
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/pitagoras.png"/ width=500px height=30px>
+	<h5 align="center">Figure 12 - Pitágoras</h5>
+	<br>
+</p>
 
 A segunda função é a colorInterpolation, mas antes de mostrar o cabeçalho desta função vamos falar das mudanças feitas no código atual.  A primeira mudança foi dentro do função drawLine, o seu cabeçalho foi mudado para:
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/pitagoras.png"/ width=500px height=30px>
+	<h5 align="center">Figure 12 - Pitágoras</h5>
+	<br>
+</p>
 
 Foi acrescentada uma nova variável chamada corF, essa variável representa a cor que terá o segundo vértice da reta. Também ocorreram as seguintas mudanças dentro do corpo da função drawLine:
 
