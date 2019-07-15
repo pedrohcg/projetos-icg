@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1562423056 source:c:\users\first place\documents\cg1\main.cpp
+	"main.h"
+	<stdio.h>
+	<vector>
+
+1562102654 c:\users\first place\documents\cg1\main.h
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/glut.h>
+	<iostream>
+	"definitions.h"
+	"mygl.h"
+
+1354148918 c:\users\first place\documents\cg1\definitions.h
+
+1562424587 c:\users\first place\documents\cg1\mygl.h
+	"definitions.h"
+	<vector>
+	<math.h>
+
