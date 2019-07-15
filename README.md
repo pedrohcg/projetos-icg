@@ -311,14 +311,19 @@ A segunda função é a colorInterpolation, mas antes de mostrar o cabeçalho de
 
 <p align="center">
 	<br>
-	<img src="./projeto1/prints-cg/pitagoras.png"/ width=500px height=30px>
-	<h5 align="center">Figure 12 - Pitágoras</h5>
+	<img src="./projeto1/prints-cg/drawline2.png"/ width=500px height=30px>
+	<h5 align="center">Figure 13 - Drawline 2</h5>
 	<br>
 </p>
 
 Foi acrescentada uma nova variável chamada corF, essa variável representa a cor que terá o segundo vértice da reta. Também ocorreram as seguintas mudanças dentro do corpo da função drawLine:
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/drawline2.png"/ width=500px height=30px>
+	<h5 align="center">Figure 14 - Drawline 2</h5>
+	<br>
+</p>
 
 Os novos vetores RGBAi e RGBAf servem para guardar a cor inicial e final da reta, essas variáveis serão usadas na função de interpolação de cores. O vetor RGBA é a “cor final” é nesse vetor onde vai ficar a cor que o pixel irá exibir. Também foram acrescentadas as variáveis distReta, distPonto e p. distReta é a variável que armazena o tamanho da reta. distPonto é a variável que armazena a distancia do ponto atual até o final da reta. p é a razão entre distPonto e distReta, ela será usada para calcular a porcentagem de cor que deverá ser diminuída ou aumentada dependendo da distancia da reta. O maior valor que p consegue ter é 1 e o menor é 0.
 
