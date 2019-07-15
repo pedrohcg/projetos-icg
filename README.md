@@ -28,16 +28,31 @@ Este é o primeiro projeto da disciplina Introdução à Computação Gráfica, 
 Primeiramente devemos entender o que é rasterização.  Rasterização é a tarefa de converter uma imagem vetorial(curvas funcionais) em uma imagem raster(pixels ou pontos). Agora que já sabemos o que é rasterizar vamos entender o que é um pixel. Um pixel é o menor elemento em um dispositivo de exibição, um monitor por exemplo, ao qual é possível atribuir-se uma cor. Neste projeto utilizaremos o formato RGBA para atribuir cor aos pixels.
 
 Cada pixel contém suas informações RGBA que são armazenadas em 4 bytes. Cada byte contém uma das cores primarias que são RED(vermelho), GREEN(verde), BLUE(azul), ALPHA(transparente),  com esse sistema é possível criar mais de 16 milhões diferentes combinações de tons.
-  
-/** Representação do sistema RGB. (imagem) **/
+
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/representacao-rgb.png"/ width=500px height=400px>
+	<h5 align="center">Figure 1 - Representação do sistema RGB</h5>
+	<br>
+</p>
 
 Agora vamos observar o cabeçalho da função putPixel: 
 
-/**         (imagem)         **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/cabecalho1.png"/ width=500px height=50px>
+	<h5 align="center">Figure 2 - Código da função putPixel</h5>
+	<br>
+</p>
 
 Ele recebe como parâmetros a posição x, a posição y e um vetor que contém a cor.  Como cada pixel ocupa 4 bytes é necessário multiplicar a posição x por 4, além disso, somamos a posição x com o valor de i para percorremos todos os bytes de cor e atribuir-lhes seus valores RGBA.
 
-/**         (imagem)         **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/rgba-memoria.png"/ width=500px height=150px>
+	<h5 align="center">Figure 2 - Ocupacao do pixel na memoria</h5>
+	<br>
+</p>
 
 Porém isso só funciona para a posição x, para acharmos a posição y de um pixel é necessário utilizarmos a seguinte função:
 
@@ -47,11 +62,21 @@ Porém isso só funciona para a posição x, para acharmos a posição y de um p
 
 Após implementarmos essa função o código fica assim:
 
-/**         (imagem)         **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/codigo1.png"/ width=500px height=100px>
+	<h5 align="center">Figure 2 - Ocupacao do pixel na memoria</h5>
+	<br>
+</p>
             
 Os resultados são os seguintes:
 	 
-/**         (imagem)         **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/foto1.png"/ width=500px height=500px>
+	<h5 align="center">Figure 2 - Ocupacao do pixel na memoria</h5>
+	<br>
+</p>
 
 Nessa imagem a função foi chamada várias vezes para que os pixels fiquem mais perceptíveis.
 
