@@ -311,7 +311,7 @@ A segunda função é a colorInterpolation, mas antes de mostrar o cabeçalho de
 
 <p align="center">
 	<br>
-	<img src="./projeto1/prints-cg/drawline2.png"/ width=500px height=30px>
+	<img src="./projeto1/prints-cg/drawline2.png"/ width=700px height=30px>
 	<h5 align="center">Figure 13 - Drawline 2</h5>
 	<br>
 </p>
@@ -320,8 +320,8 @@ Foi acrescentada uma nova variável chamada corF, essa variável representa a co
 
 <p align="center">
 	<br>
-	<img src="./projeto1/prints-cg/drawline2.png"/ width=500px height=30px>
-	<h5 align="center">Figure 14 - Drawline 2</h5>
+	<img src="./projeto1/prints-cg/drawline.png"/ width=500px height=800px>
+	<h5 align="center">Figure 14 - Escopo de drawline</h5>
 	<br>
 </p>
 
@@ -329,14 +329,25 @@ Os novos vetores RGBAi e RGBAf servem para guardar a cor inicial e final da reta
 
 A função colorInterpolation é essa:
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/codigo2.png"/ width=900px height=400px>
+	<h5 align="center">Figure 15 - Função colorInterpolation</h5>
+	<br>
+</p>
+
 
 Essa função é dividida em duas partes. A primeira parte é o decremento de cor, ela verifica qual é a cor inicial por meio da variável RGBAi e atribui a variável RGBA o valor da cor inicial multiplicado por p. A segunda parte é o incremento de cor, ela verifica qual é a cor final por meio da variável RGBAf e atribui a variável RGBA o valor da cor final multiplicado por (1-p).
 A função colorInterpolation deve ser chamada toda vez antes da função putPixel.
 
 O resultado é o seguinte:
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/foto5.png"/ width=500px height=500px>
+	<h5 align="center">Figure 16 - Resultado do colorInterpolation</h5>
+	<br>
+</p>
 
 ---
 
@@ -344,13 +355,23 @@ O resultado é o seguinte:
 
 Nossa próxima tarefa é desenhar um triângulo, para fazer isso basta criar uma função chamada drawTriangle cujo cabeçalho: 
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/cabecalho3.png"/ width=900px height=30px>
+	<h5 align="center">Figure 17 - Cabeçalho do drawTriangle</h5>
+	<br>
+</p>
 
 Essa função recebe os 3 vertices do triangulo e as cores de cada vértice. Para conseguir desenhar um triângulo é bem simples, basta chamar a função drawLine 3 vezes com um vértice ligando ao outro.
 
 Os resultados são os seguintes:
 
-/**        (imagem)        **/
+<p align="center">
+	<br>
+	<img src="./projeto1/prints-cg/foto6.png"/ width=500px height=500px>
+	<h5 align="center">Figure 18 - Resultado do drawTriangle</h5>
+	<br>
+</p>
 
 ---
 
